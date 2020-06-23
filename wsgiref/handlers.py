@@ -92,7 +92,7 @@ def read_environ():
 
 
 class BaseHandler:
-    """Manage the invocation of a WSGI application"""
+    """Manage the invocation 调用 of a WSGI application"""
 
     # Configuration parameters; can override per-subclass or per-instance
     wsgi_version = (1,0)

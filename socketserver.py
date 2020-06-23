@@ -202,7 +202,6 @@ class BaseServer:
 
     - RequestHandlerClass # 用户提供的 request handler class，一个会被每个请求创建的实例
     - socket # server 对 incoming request 监听的 socket 对象
-
     """
 
     timeout = None
@@ -474,8 +473,10 @@ class TCPServer(BaseServer):
         """
         if self.allow_reuse_address:
             self.socket.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
+        print(self.server_address)
         self.socket.bind(self.server_address)  # 绑定 socket 端口
         self.server_address = self.socket.getsockname()  # 获取 server address
+        print(self.server_address)
 
     def server_activate(self):
         """Called by constructor to activate the server.
@@ -718,9 +719,8 @@ class BaseRequestHandler:
     The handle() method can find the request as self.request, the
     client address as self.client_address, and the server (in case it
     needs access to per-server information) as self.server.  Since a
-    separate instance is created for each request, the handle() method
-    can define other arbitrary instance variables.
-
+    separate 不同的 instance is created for each request, the handle() method
+    can define other arbitrary 任意的 instance variables.
     """
 
     def __init__(self, request, client_address, server):

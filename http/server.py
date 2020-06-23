@@ -272,7 +272,6 @@ class BaseHTTPRequestHandler(socketserver.StreamRequestHandler):
 
         Return True for success, False for failure; on failure, any relevant
         error response has already been sent back.
-
         """
         self.command = None  # set in case of error on the first line
         self.request_version = version = self.default_request_version

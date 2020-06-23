@@ -122,7 +122,7 @@ class WSGIRequestHandler(BaseHTTPRequestHandler):
             self.send_error(414)
             return
 
-        if not self.parse_request(): # An error code has been sent, just exit
+        if not self.parse_request():
             return
 
         handler = ServerHandler(
