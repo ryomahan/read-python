@@ -19,4 +19,4 @@ Record source code reading note.
 
 Write some code for practising what I study in source code.
 
-[wsgiref | a wsgi server and request handler](/practice/for_wsgiref)
+[wsgiref | a wsgi server and request handler](/practices/for_wsgiref)
